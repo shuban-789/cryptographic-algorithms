@@ -17,18 +17,19 @@ class substitution:
     return ct
 
   def decrypt(dec):
-    alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    pt=""
-    for i in range(0,len(dec.text)):
-      if dec.text[i] in alphabet:
-        for j in range(0,len(dec.text)):
-          if dec.text[i] == dec.key[j]:
-            index = j
-        newchar = alphabet[index]
-        pt += newchar
-      else:
-        pt += dec.text[i]
-    return pt
+      alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      pt = ""
+      for i in range(0, len(dec.text)):
+        if dec.text[i] in alphabet:
+          for j in range(0, len(alphabet)):
+            if dec.text[i] == dec.key[j]:
+              index = j
+          newchar = alphabet[index]
+          pt += newchar
+        else:
+          pt += dec.text[i]
+      return pt
 
-mycipher = substitution("QWERTYUIOPASDFGHJKLZXCVBNM","HELLO WORLD")
-print(mycipher.encrypt())
+
+mycipher = substitution("QWERTYUIOPASDFGHJKLZXCVBNM","ITSSG VGKSR")
+print(mycipher.decrypt())
