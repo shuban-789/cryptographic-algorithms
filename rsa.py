@@ -3,7 +3,7 @@
 # Project: CSP Passion Project
 # Date: 2023
 
-# DISCLAIMER: This implementations follows RSA and is not a custom algorithm. And neither is the miller-rabin test.
+# DISCLAIMER: This implementation follows RSA and is not a custom algorithm. And neither is the miller-rabin test.
 
 import random
 
